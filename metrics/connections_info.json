@@ -1,0 +1,16 @@
+[
+  {
+    "HTTP_method": "GET",
+    "originalUrl": "/",
+    "timestamp": 1559735643844,
+    "dateFormatted": "2019-06-05T11:54:03.844Z",
+    "remoteAddress": "::1"
+  },
+  {
+    "HTTP_method": "GET",
+    "originalUrl": "/",
+    "timestamp": 1559735676968,
+    "dateFormatted": "2019-06-05T11:54:36.968Z",
+    "remoteAddress": "::1"
+  }
+]
