@@ -40,15 +40,17 @@ app.use((req, res, next) => {
             console.log(err);
         } else {
             if(data.length > 0){
-                let metrics = [];
-                metrics.push(JSON.parse(data)); //current data
-                metrics.push(connectionInfo) // new connection
-                fs.writeFileSync(`${dir_metrics}`, JSON.stringify(metrics));
+                let currentArrayMetrics = JSON.parse(data);
+
+                currentArrayMetrics.push(JSON.parse(data)); //current data
+                currentArrayMetrics.push(connectionInfo) // new connection
+
+                fs.writeFileSync(`${dir_metrics}`, JSON.stringify(currentArrayMetrics));
 
             } else {
                 let metrics = [];
-                metrics.push(JSON.stringify(connectionInfo));
-                fs.writeFileSync(`${dir_metrics}`, metrics);
+                metrics.push(connectionInfo);
+                fs.writeFileSync(`${dir_metrics}`, JSON.stringify(metrics));
             }
 
         }
