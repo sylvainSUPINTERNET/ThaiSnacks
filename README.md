@@ -1,3 +1,3 @@
-#ThaiSnacks
+# ThaiSnacks
 
-Application for thai snacks selling
+**Application for thai snacks selling**
