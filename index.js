@@ -19,8 +19,8 @@ app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
 app.use(bodyParser.json());
 
-// e.g -> http://localhost:3000/static/images/bg.png
-app.use('/static', express.static(__dirname + '/public'));
+// e.g -> http://localhost:3000/images/bg.png
+app.use('', express.static(__dirname + '/public'));
 
 
 
@@ -40,7 +40,6 @@ app.use((req, res, next) => {
             console.log(err);
         } else {
             if(data.length > 0){
-                console.log(JSON.parse(data))
                 let metrics = [];
                 metrics.push(JSON.parse(data)); //current data
                 metrics.push(connectionInfo) // new connection
@@ -66,5 +65,5 @@ app.get('/', function(req, res) {
 
 app.listen(port, function () {
     console.log("one connection")
-    console.log('Example app listening on port 3000!')
+    console.log(`App runs on port : ${port}`)
 });
